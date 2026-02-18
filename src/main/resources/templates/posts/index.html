@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <title>AjaxApp</title>
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <script th:src="@{/js/memo.js}"></script>
 </head>
 <body>
   <h1>AjaxApp</h1>
 
-  <from th:action="@{/posts}" method="post" th:object="${postForm}" id="form">
-    <input type="text" th:field="*{comtent}"/>
+  <form th:action="@{/posts}" method="post" th:object="${postForm}" id="form">
+    <input type="text" th:field="*{content}"/>
     <input type="submit" value="投稿する" id="submit"/>
-  </from>
+  </form>
 
   <div id="list">
 
